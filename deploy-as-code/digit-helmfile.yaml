@@ -4,4 +4,7 @@ helmfiles:
   - path: ./charts/core-services/coreservices-helmfile.yaml
   - path: ./charts/monitoring/monitoring-helmfile.yaml
 
-
+environments:
+  default: {}
+  lts: {}
+  dev: {}
