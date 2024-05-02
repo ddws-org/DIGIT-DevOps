@@ -13,7 +13,6 @@ variable "vpc_cidr_block" {
   default = "192.168.0.0/16"
 }
 
-
 variable "network_availability_zones" {
   description = "Configure availability zones configuration for VPC. Leave as default for India. Recommendation is to have subnets in at least two availability zones"
   default = ["ap-south-1b", "ap-south-1a"] #REPLACE IF NEEDED
@@ -26,7 +25,7 @@ variable "availability_zones" {
 
 variable "kubernetes_version" {
   description = "kubernetes version"
-  default = "1.28"
+  default = "1.29"
 }
 
 variable "instance_type" {
@@ -37,7 +36,6 @@ variable "instance_type" {
 variable "override_instance_types" {
   description = "Arry of instance types for SPOT instances"
   default = ["r5a.large", "r5ad.large", "r5d.large", "m4.xlarge"]
-  
 }
 
 variable "number_of_worker_nodes" {
@@ -49,7 +47,6 @@ variable "ssh_key_name" {
   description = "ssh key name, not required if your using spot instance types"
   default = <ssh_key_name> #REPLACE
 }
-
 
 variable "db_name" {
   description = "RDS DB name. Make sure there are no hyphens or other special characters in the DB name. Else, DB creation will fail"
